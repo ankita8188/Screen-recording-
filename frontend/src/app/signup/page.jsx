@@ -23,7 +23,7 @@ const Signup = () => {
     onSubmit: (values, { resetForm, setSubmitting }) => {
       console.log(values);
 
-      axios.post('http://localhost:5000/user/add', values)
+      axios.post(`${process.env.BACKEND_URL}/user/add`, values)
         .then((result) => {
           toast.success('Registered successfully');
           resetForm();

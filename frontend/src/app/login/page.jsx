@@ -17,7 +17,7 @@ const Login = () => {
     },
     onSubmit: (values, { resetForm, setSubmitting }) => {
       axios
-        .post('http://localhost:5000/user/authenticate', values)
+        .post(`${process.env.BACKEND_URL}/user/authenticate`, values)
         .then((res) => {
 
           toast.success('Logged in successfully!');
