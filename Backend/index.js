@@ -5,10 +5,12 @@ const RecordRouter = require('./routers/recordingRouter');
 
 const cors = require('cors');
 // Creating n express app
+require('dotenv').config();
 
 const app = express();
 
-const port = 5000;
+
+const port = process.env.PORT;
 
 
 //middleware

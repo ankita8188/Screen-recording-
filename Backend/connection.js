@@ -1,7 +1,7 @@
 //library it makes a easy work with mongodb
 const mongoose = require('mongoose');
-
-const url ="mongodb+srv://ankita8188:ankita2004@cluster0.88vks.mongodb.net/mydb563?retryWrites=true&w=majority&appName=Cluster0";
+require('dotenv').config();
+const url =process.env.MONGO_URL;
 
 // asynchronous function - returns promise
 mongoose.connect(url)
