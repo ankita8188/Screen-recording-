@@ -16,7 +16,7 @@ const port = process.env.PORT;
 //middleware
 app.use(cors({
     method:['POST','GET','PUT','DELETE'],
-    origin:['https://screen-recording-chi.vercel.app/'],
+    origin:['https://screen-recording-chi.vercel.app'],
 }))
 app.use(express.json());
 app.use('/user', UserRouter);
