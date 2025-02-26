@@ -19,7 +19,7 @@ const Login = () => {
     onSubmit: (values, { resetForm, setSubmitting }) => {
       
       axios
-        .post(`https://screen-recording-4.onrender.com/user/authenticate`, values)
+        .post(`${process.env.NEXT_PUBLIC_API_URL}/user/authenticate`, values)
         .then((res) => {
 
           toast.success('Logged in successfully!');
