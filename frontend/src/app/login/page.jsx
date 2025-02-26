@@ -17,9 +17,9 @@ const Login = () => {
       password: '',
     },
     onSubmit: (values, { resetForm, setSubmitting }) => {
-      console.log(process.env.BACKEND_URL)
+      
       axios
-        .post(`${process.env.BACKEND_URL}/user/authenticate`, values)
+        .post(`https://screen-recording-4.onrender.com/user/authenticate`, values)
         .then((res) => {
 
           toast.success('Logged in successfully!');
