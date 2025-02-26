@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 
 const Login = () => {
   const isServer = ()=> typeof window !=='undefined';
+  
   const router = useRouter();
 
   const loginForm = useFormik({
@@ -16,6 +17,7 @@ const Login = () => {
       password: '',
     },
     onSubmit: (values, { resetForm, setSubmitting }) => {
+      console.log(process.env.BACKEND_URL)
       axios
         .post(`${process.env.BACKEND_URL}/user/authenticate`, values)
         .then((res) => {
