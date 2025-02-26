@@ -61,7 +61,7 @@ const Record = () => {
 
                     const { url } = response.data;
                     try {
-                        await axios.post(`${process.env.BACKEND_URL}/record/add`, {
+                        await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/record/add`, {
                             title: prompt('Enter Video Title'),
                             file: url
                         });
