@@ -12,7 +12,7 @@ const Manage = () => {
     const fetchRecord = async () => {
         try {
             setLoading(true);
-            const res = await axios.get(`${process.env.BACKEND_URL}/record/getall`);
+            const res = await axios.get(`https://screen-recording-4.onrender.com/record/getall`);
             setRecordList(res.data);
         } catch (error) {
             console.log(error);
@@ -30,7 +30,7 @@ const Manage = () => {
     const deleteRecord = async (id) => {
         try {
             if (!confirm('Are you sure you want to delete this record?')) return;
-            const res = await axios.delete(`${process.env.BACKEND_URL}/record/delete/${id}`);
+            const res = await axios.delete(`https://screen-recording-4.onrender.com/record/delete/${id}`);
             if (res.status === 200) {
                 fetchRecord();
                 toast.success('Record deleted successfully');
